@@ -1,10 +1,10 @@
-System;
-using System.Collections.Generic
+using System;
+using System.Collections.Generic;
 using System.Threading;
 
-ProblematicProblem
+namespace ProblematicProblem
 {
-    Program class
+    internal class Program 
     {
         Random rng;
 static bool cont = true;
@@ -18,7 +18,7 @@ static List<string> activities = new List<string>() { "Movies", "Paintball", "Bo
     string userName = Console.ReadLine();
     Console.WriteLine();
     Console.Write("What is your age? ");
-    int userAge = Console.ReadLine();
+    int userAge = int.Parse(Console.ReadLine());
     Console.WriteLine();
     Console.Write("Would you like to see the current list of activities? Sure/No thanks: ");
     bool seeList = bool.Parse(Console.ReadLine());
@@ -38,7 +38,7 @@ static List<string> activities = new List<string>() { "Movies", "Paintball", "Bo
             Console.Write("What would you like to add? ");
             string userAddition = Console.ReadLine();
             activities.Add(userAddition);
-            foreach (string activity activities)
+            foreach (string activity in activities)
             {
                 Console.Write($"{activity} ");
                 Thread.Sleep(250);
