@@ -8,18 +8,21 @@ namespace ProblematicProblem
     {
         static Random rng = new Random();
 
-        //static bool cont = true;
+        
         static List<string> activities = new List<string>()
         { "Movies", "Paintball", "Bowling", "Lazer Tag",
             "LAN Party", "Hiking", "Axe Throwing", "Wine Tasting" };
 
         static void Main(string[] args)
 {
-            Console.Write("Hello, welcome to the random activity generator!" +
-                " \nWould you like to generate a random activity? yes/no: ");
-            bool cont = Console.ReadLine().ToLower() == "yes";
-
-        //bool cont = bool.Parse(Console.ReadLine());
+            Console.Write("Hello, welcome to the random activity generator! \nWould you like to generate a random activity? yes/no: ");
+            //string answer = Console.ReadLine();
+            bool cont = Console.ReadLine().ToLower() == "yes" ? true : false;
+            if (cont == false)
+            {
+                return;
+            }
+        
     Console.WriteLine();
 
     Console.Write("We are going to need your information first! What is your name? ");
@@ -45,7 +48,7 @@ namespace ProblematicProblem
         Console.WriteLine();
 
         Console.Write("Would you like to add any activities before we generate one? yes/no: ");
-                bool addToList = Console.ReadLine().ToLower() == "yes";
+                bool addToList = Console.ReadLine() == "yes" ? true: false;
 
         Console.WriteLine();
 
@@ -61,7 +64,7 @@ namespace ProblematicProblem
             }
             Console.WriteLine();
             Console.WriteLine("Would you like to add more? yes/no: ");
-                    addToList = Console.ReadLine().ToLower() == "yes";
+                    addToList = Console.ReadLine() == "yes" ? true: false;
         }
     }
 
